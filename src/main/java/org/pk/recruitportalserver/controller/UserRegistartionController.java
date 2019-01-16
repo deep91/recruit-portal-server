@@ -21,11 +21,7 @@ public class UserRegistartionController {
 
 	@PostMapping(value = "/create")
 	public User postCustomer(@RequestBody User user) {
-
-		User user1 = new User();
-		user1.setFirst_name(user.getFirst_name());
-		user1.setLast_name(user.getLast_name());
-		this.userRepository.save(user);
+			this.userRepository.save(user);
 		return user;
 	}
 
